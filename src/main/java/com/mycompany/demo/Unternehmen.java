@@ -12,6 +12,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 
@@ -25,14 +27,20 @@ import javax.persistence.Table;
 
 
 @Entity 
-
 @Table(name="unternehmen")
+@NamedQueries({
+ @NamedQuery(name = "Unternehmen.findAll", query = "SELECT c FROM Unternehmen c"),
+ @NamedQuery(name = "Unternehmen.findById", query = "SELECT c FROM Unternehmen c WHERE c.Id = :Id")})
+
+
 public class Unternehmen implements Serializable {
     
+      private static final long serialVersionUID = 1L;
     
+    
+    @Id 
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name="id")
-    @Id 
     private  int  id;
     
     @Column(name="name")    
