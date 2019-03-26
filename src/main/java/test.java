@@ -1,9 +1,11 @@
+package com.mycompany.demo;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.demo;
+
 
 
 import java.io.Serializable;
@@ -27,7 +29,7 @@ import javax.persistence.Table;
 @Entity 
 
 @Table(name="unternehmen")
-public class Unternehmen implements Serializable {
+public class test implements Serializable {
     
     
     @GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -49,17 +51,17 @@ public class Unternehmen implements Serializable {
    
 
     
-    public Unternehmen() {
+    public test() {
          super();
     }
 
-    public Unternehmen(String name, float eigenkapital, float jahresueberschuss) {
+    public test(String name, float eigenkapital, float jahresueberschuss) {
         super();
         this.name = name;
         this.eigenkapital = eigenkapital;
         this.jahresueberschuss = jahresueberschuss;}
     
-        public Unternehmen( String name, String datum, float eigenkapital, float jahresueberschuss) {
+        public test( String name, String datum, float eigenkapital, float jahresueberschuss) {
         super();
             this.name = name;
         this.eigenkapital = eigenkapital;

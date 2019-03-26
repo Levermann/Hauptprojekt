@@ -13,9 +13,6 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
-
-
-
 /**
  *
  * @author Flandd done 01.03.2019

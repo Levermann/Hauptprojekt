@@ -18,9 +18,7 @@
     <property name="current_session_context_class">thread</property>
     <!-- List of XML mapping files -->
     <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-   
     <mapping class="com.mycompany.demo.Unternehmen"/>
-    <mapping class="com.mycompany.demo.Aktienwerte"/>
-        <mapping class="com.mycompany.demo.Punkteliste"/>
+    <class-cache class="test" include="all" usage="read-write"/>
   </session-factory>
 </hibernate-configuration>

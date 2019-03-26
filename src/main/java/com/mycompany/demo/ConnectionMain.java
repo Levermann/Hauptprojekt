@@ -5,8 +5,9 @@
  */
 package com.mycompany.demo;
 
-
 import java.util.Scanner;
+
+
 /**
  *
  * @author chlad
@@ -22,13 +23,13 @@ public class ConnectionMain {
         
    
         
-        Aggregate min = new Aggregate ();
-        min.Min();
+    //   ag min = new ag ();
+     //   min.min();
         
-    //    Gewinnrevision Gewinnrevision = new Gewinnrevision();
-      //  Gewinnrevision.Gewinnrevision();
+     // Gewinnrevision Gewinnrevision = new Gewinnrevision();
+    //    Gewinnrevision.Gewinnrevision();
   
- /*       System.out.println("Wilkommen in der Tabellenbearbeitung \n Bitte wählen Sie: \n 0. Unternehmen \n 1. Aktienwerte \n 2. Gewinnrevision");         
+       System.out.println("Wilkommen in der Tabellenbearbeitung \n Bitte wählen Sie: \n 0. Unternehmen \n 1. Aktienwerte \n 2. Gewinnrevision");         
         
         Scanner scanner = new Scanner(System.in);
         int i = scanner.nextInt();

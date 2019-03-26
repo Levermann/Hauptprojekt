@@ -37,7 +37,8 @@ public class Aktienwerte implements Serializable {
     
     @Column(name="Wert_pro_Aktie")    
     private float Wert_pro_Aktie;
-
+ 
+    @Column(name="datum")
     private String datum;
 
     

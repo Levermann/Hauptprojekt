@@ -5,29 +5,26 @@
  */
 package com.mycompany.demo;
 
-import java.io.IOException;
-import java.util.Iterator;
+
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
-import org.hibernate.HibernateException;
-import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.Query;
 
 /**
- *
+ *  
  * @author Landb
  */
 
 
 
-public class Aggregate {
+public class ag {
     
-public void Min() {
-   
+public void min() {
+   /*
         SessionFactory factory;
     factory = (SessionFactory) new Configuration().configure().buildSessionFactory();
     Session session = factory.openSession(); 
@@ -35,21 +32,22 @@ public void Min() {
     Unternehmen Unternehmen =new Unternehmen();
     Punkteliste Punkteliste =new Punkteliste();
     
-         session.beginTransaction();
+EntityManager em = entityManagerFactory.createEntityManager();
+
+
+
+     session.beginTransaction();
+        
  
-    
-    
-         EntityManager em = null;
+   
          
-         TypedQuery<Aktienwerte> query = em.createQuery("SELECT SUM(Wert_pro_Aktie) from Aktienwerte", Aktienwerte.class);
-         List<Aktienwerte> werte = query.getResultList();
+        // TypedQuery<Aktienwerte> query = em.createQuery("SELECT max(Wert_pro_Aktie) from Aktienwerte", Aktienwerte.class);
+     //    List<Aktienwerte> werte = query.getResultList();
                  
-//  Query query = session.createQuery("SELECT SUM(Wert_pro_Aktie) from Aktienwerte");
+ Query query = em.createNativeQuery ("SELECT max(Wert_pro_Aktie) from Aktienwerte", Aktienwerte.class);
 
-  // List<Aktienwerte> users1 = (List<Aktienwerte>) session;
-     
-    // for (Aktienwerte u : users1)
-
+   
+MyTest Aktienwerte = (Aktienwerte) query.getResultList().get(0);
  
                  System.out.println("test3"); 
 
@@ -58,7 +56,7 @@ public void Min() {
      session.getTransaction().commit();
      session.close();         
       System.err.println("Abfrage Beendet");   
-      
+ */     
       
 }
 }
