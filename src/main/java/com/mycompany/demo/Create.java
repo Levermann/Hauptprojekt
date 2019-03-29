@@ -37,7 +37,7 @@ public class Create {
             //create a unternehmen object
             System.out.println("Creating new Unternehmen Object");
       
-            Unternehmen Unternehmen = new Unternehmen (Company, datum , eigenkapital , jahresueberschuss);
+            Unternehmen Unternehmen = new Unternehmen ();
 
             // start a transaction
             session.beginTransaction();

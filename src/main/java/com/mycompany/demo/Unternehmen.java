@@ -50,10 +50,10 @@ public class Unternehmen implements Serializable {
 
     
     public Unternehmen() {
-         super();
+        
     }
 
-    public Unternehmen(String name, float eigenkapital, float jahresueberschuss) {
+    /*public Unternehmen(String name, float eigenkapital, float jahresueberschuss) {
         super();
         this.name = name;
         this.eigenkapital = eigenkapital;
@@ -65,7 +65,7 @@ public class Unternehmen implements Serializable {
         this.eigenkapital = eigenkapital;
         this.jahresueberschuss = jahresueberschuss;
         this.datum = datum;
-}
+}*/
 
    
     /**

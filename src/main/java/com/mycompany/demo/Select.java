@@ -6,7 +6,6 @@
 package com.mycompany.demo;
 
 
-import static com.sun.org.apache.xalan.internal.lib.ExsltDatetime.date;
 import java.util.List;
 import java.util.Scanner;
 import org.hibernate.Query;
