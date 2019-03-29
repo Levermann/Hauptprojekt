@@ -7,9 +7,13 @@
 
 package com.mycompany.demo;
 
+import java.util.logging.Logger;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 /**
  *
  * @author Landb
@@ -17,8 +21,47 @@ import javax.persistence.Persistence;
 public class newClass {
     
     
+    Logger log = Logger.getLogger(this.getClass().getName());
+    
+    private EntityManagerFactory emf;
+    
+    @Before
+    public void init(){
+    emf = Persistence.createEntityManagerFactory("my-persistence-unit");
+    }
+    
+   @After
+    public void close(){
+        emf.close();
+        
+    }
     
     
+    @Test
+    public void createUnternehmen(){
+        
+          Unternehmen un = new Unternehmen();
+          
+        EntityManager em = emf.createEntityManager();
+        
+        em.getTransaction().begin();
+        
+      
+        
+        un.setId(3);
+        un.setDate("29.03.2019");
+        un.setEigenkapital(5000);
+        un.setJahresueberschuss(50000);
+        un.setName("BMWW");
+        
+       em.persist(un);
+    }
+    
+    
+}
+    
+    
+    /*
      public static void main(String[] args)
    {
       EntityManagerFactory emfactory = Persistence.createEntityManagerFactory( "HibernatePersistenzEM");
@@ -42,6 +85,6 @@ public class newClass {
       entitymanager.close( );
       emfactory.close( );
    }
+    */
     
-    
-}
+

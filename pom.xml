@@ -42,11 +42,6 @@
             <type>jar</type>
         </dependency>
         <dependency>
-            <groupId>unknown.binary</groupId>
-            <artifactId>mysql-connector-java-5.1.23-bin</artifactId>
-            <version>SNAPSHOT</version>
-        </dependency>
-        <dependency>
             <groupId>jdbc</groupId>
             <artifactId>jdbc-stdext</artifactId>
             <version>2.0</version>
@@ -56,12 +51,6 @@
             <groupId>org.codehaus.mojo</groupId>
             <artifactId>exec-maven-plugin</artifactId>
             <version>1.2.1</version>
-        </dependency>
-        <dependency>
-            <groupId>HibernatePersistenzEM</groupId>
-            <artifactId>hibernate-jpa-2.1-api</artifactId>
-            <version>1.0.0.Final</version>
-            <type>jar</type>
         </dependency>
         <dependency>
             <groupId>hibernate</groupId>
@@ -117,11 +106,6 @@
             <groupId>org.eclipse.persistence</groupId>
             <artifactId>org.eclipse.persistence.oracle</artifactId>
             <version>2.6.1-RC1</version>
-        </dependency>
-        <dependency>
-            <groupId>unknown.binary</groupId>
-            <artifactId>javax.persistence</artifactId>
-            <version>SNAPSHOT</version>
         </dependency>
     </dependencies>
     <properties>

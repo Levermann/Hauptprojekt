@@ -14,13 +14,25 @@ import java.util.Scanner;
  */
 public class ConnectionMain {
 
+    
+    
+    
     /**
      * @param args the command line arguments
-     */
+    
+    * 
+    * */
     @SuppressWarnings("empty-statement")
     public static void main(String[] args) {
 
-        
+
+     
+     
+    newClass n = new newClass();
+    
+    n.createUnternehmen();
+ 
+      /*
    
         
     //   ag min = new ag ();
