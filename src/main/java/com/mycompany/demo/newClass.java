@@ -11,6 +11,7 @@ import java.util.logging.Logger;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import javax.persistence.PersistenceContext;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -23,11 +24,25 @@ public class newClass {
     
     Logger log = Logger.getLogger(this.getClass().getName());
     
+   @PersistenceContext
+    EntityManager entityManager;
+   
+   public  EntityManager getEntityManager() {
+    return emf.createEntityManager();}
+   
     private EntityManagerFactory emf;
+    
+    public Unternehmen getMovie(Long movieId) {
+    EntityManager em = getEntityManager();
+    Unternehmen Unternehmen = em.find(Unternehmen.class, new Long(movieId));
+    em.detach(Unternehmen);
+    return Unternehmen;
+}
+    
     
     @Before
     public void init(){
-    emf = Persistence.createEntityManagerFactory("my-persistence-unit");
+    emf = Persistence.createEntityManagerFactory("HibernatePersistenzEM");
     }
     
    @After
@@ -37,16 +52,15 @@ public class newClass {
     }
     
     
-    @Test
     public void createUnternehmen(){
         
-          Unternehmen un = new Unternehmen();
           
         EntityManager em = emf.createEntityManager();
         
         em.getTransaction().begin();
         
-      
+    Unternehmen un = new Unternehmen();
+
         
         un.setId(3);
         un.setDate("29.03.2019");
@@ -55,6 +69,7 @@ public class newClass {
         un.setName("BMWW");
         
        em.persist(un);
+       em.getTransaction().commit();
     }
     
     
