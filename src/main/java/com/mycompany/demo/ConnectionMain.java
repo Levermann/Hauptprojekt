@@ -14,7 +14,7 @@ import org.hibernate.Query;
 
 /**
  *
- * @author Team
+ * @author Das ist ein Test :D
  */
 public class ConnectionMain {
 
