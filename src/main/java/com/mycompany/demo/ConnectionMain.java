@@ -14,10 +14,11 @@ import org.hibernate.Query;
 
 /**
  *
- * @author chlad
+ * @author Team
  */
 public class ConnectionMain {
 
+    
     
     
     
