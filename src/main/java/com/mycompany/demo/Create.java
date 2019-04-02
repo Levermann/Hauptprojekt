@@ -17,34 +17,38 @@ import java.util.Scanner;
  */
 public class Create {
  
-    public void CreateUnternehmen () {
-             System.out.println(" Bitte \n 1. Unternehmen \n 2. Datum \n 3. Eigenkapital \n 4. Jahresüberschuss");
+     public void CreateUnternehmen () {
+             System.out.println(" Bitte \n 1. Unternehmen \n 2. Datum \n 3. Eigenkapital \n 4. JahresÃ¼berschuss");
 
         Scanner scanner = new Scanner(System.in);
-           String Company = scanner.next();
+           String name = scanner.next();
                       String datum = scanner.next();
            float eigenkapital = scanner.nextInt();
            float jahresueberschuss = scanner.nextInt();
 
          
-        // create session factory
-        SessionFactory factory;
-        factory = (SessionFactory) new Configuration().configure().addAnnotatedClass(Unternehmen.class).buildSessionFactory();
-     
-        // create session
-        Session session = factory.getCurrentSession();
+    SessionFactory factory;
+    factory = (SessionFactory) new Configuration().configure().buildSessionFactory();
+    Session session = factory.openSession(); 
+    
+    
       try{
             //create a unternehmen object
             System.out.println("Creating new Unternehmen Object");
       
-            Unternehmen Unternehmen = new Unternehmen ();
+            Unternehmen un = new Unternehmen (name, datum , eigenkapital , jahresueberschuss);
 
+            un.setName(name); 
+            un.setDatum(datum);
+            un.setEigenkapital(eigenkapital);
+            un.setJahresueberschuss(jahresueberschuss);
+                        
             // start a transaction
             session.beginTransaction();
              
             // safe Unternhemen Object
             System.out.println("Speichere Unternehmen...");
-            session.save(Unternehmen);
+            session.save(un);
           //   } while(Company!="stopp");
             //commit transaction
             
@@ -52,45 +56,8 @@ public class Create {
             System.out.println("Done!");
      
         }finally{factory.close();}         
-    }
-  
-    public void CreateAktienwert () {
- 
-        Scanner scanner = new Scanner(System.in);
-          
-        System.out.println("Bitte \n 1. Namen \n 2. \nWert 3.  Datum \n eingeben ");  
-        String name = scanner.next();
-           float Wert_pro_Aktie = scanner.nextInt();
-           String datum = scanner.next();
-         
-        // create session factory
-        SessionFactory factory;
-        factory = (SessionFactory) new Configuration().configure().addAnnotatedClass(Aktienwerte.class).buildSessionFactory();
-     
-        // create session
-        Session session = factory.getCurrentSession();
-      try{
-            //create a unternehmen object
-            System.out.println("Creating new Unternehmen Object");
       
-            Aktienwerte Aktienwerte = new Aktienwerte (name, Wert_pro_Aktie,datum);
-
-            // start a transaction
-            session.beginTransaction();
-             
-            // safe Unternhemen Object
-            System.out.println("Speichere Unternehmen...");
-            session.save(Aktienwerte);
-          //   } while(Company!="stopp");
-            //commit transaction
-            
-            session.getTransaction().commit();
-            System.out.println("Done!");
      
-        }finally{factory.close();}         
     }
-    
-    
-    
-    
+     
 }

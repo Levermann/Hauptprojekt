@@ -40,34 +40,10 @@ void DeleteUnternehmen() {
         session.beginTransaction();
         session.delete(Unternehmen);
         session.getTransaction().commit();
-        System.out.println(" ID = " + Unternehmen.getId() + " wurde gelöscht");
+        System.out.println(" ID = " + Unternehmen.getCid() + " wurde gelöscht");
      
     } finally{factory.close();}}  
 
-void DeleteAktienwerte() {
- 
-    // Eingabeauforderung Unternehmen
-    Scanner scanner = new Scanner(System.in);    
-
-   
-    SessionFactory factory;
-    factory = (SessionFactory) new Configuration().configure().buildSessionFactory();
-    Session session = factory.openSession(); 
-    try{  
-    Aktienwerte Aktienwerte=new Aktienwerte();
-  
-       System.out.println("Sie befinden sich in der IDauswahl, bitte ID Eingeben:");  
-     // Eingabeauforderung ID
-            int id = scanner.nextInt();
-            Aktienwerte.setAId(id); 
-            
-     // Verbingungsaufbau
-        session.beginTransaction();
-        session.delete(Aktienwerte);
-        session.getTransaction().commit();
-        System.out.println(" ID = " + Aktienwerte.getAId() + " wurde gelöscht");
-     
-    } finally{factory.close();}}  
 
 }                   
                   

@@ -21,7 +21,7 @@ import org.junit.Test;
  */
 public class newClass {
     
-    
+    /*
     Logger log = Logger.getLogger(this.getClass().getName());
     
    @PersistenceContext
@@ -103,3 +103,4 @@ public class newClass {
     */
     
 
+}

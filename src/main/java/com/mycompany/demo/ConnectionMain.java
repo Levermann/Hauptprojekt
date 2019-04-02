@@ -5,8 +5,12 @@
  */
 package com.mycompany.demo;
 
+import java.util.List;
 import java.util.Scanner;
-
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.TypedQuery;
+import org.hibernate.Query;
 
 /**
  *
@@ -25,25 +29,29 @@ public class ConnectionMain {
     @SuppressWarnings("empty-statement")
     public static void main(String[] args) {
 
-
-     
-     
-    newClass n = new newClass();
-    
-    n.createUnternehmen();
- 
-      /*
-   
         
-    //   ag min = new ag ();
-     //   min.min();
+
         
      // Gewinnrevision Gewinnrevision = new Gewinnrevision();
     //    Gewinnrevision.Gewinnrevision();
   
-       System.out.println("Wilkommen in der Tabellenbearbeitung \n Bitte wählen Sie: \n 0. Unternehmen \n 1. Aktienwerte \n 2. Gewinnrevision");         
+       //System.out.println("Wilkommen in der Tabellenbearbeitung \n Bitte wählen Sie: \n 0. Unternehmen \n 2. Gewinnrevision");         
         
-        Scanner scanner = new Scanner(System.in);
+       
+     //  Gewinnrevision gr = new Gewinnrevision ();
+       
+     //  gr.Gewinnrevision();
+       
+        Create create = new Create ();
+        create.CreateUnternehmen();
+
+       
+       
+       //  TypedQuery<Unternehmen> query = em.createNamedQuery("Unternehmen.findAll", Unternehmen.class);
+  //List <Unternehmen> results = query.getResultList();
+          
+       
+       /*Scanner scanner = new Scanner(System.in);
         int i = scanner.nextInt();
   
         
@@ -84,45 +92,7 @@ public class ConnectionMain {
           break;}   
       break;
       // Unternehmensauswahl ende
-    
-      // Aktienauswahl
-     case 1: 
-      
-     System.out.println("Wilkommen in der Tabellenbearbeitung für Unternehmen \n Bitte wählen Sie: \n 0. Erstellung \n 1. Auswertung \n 2. Aktualisierung \n 3. Löschen");       
-   
-       int k = scanner.nextInt();
-     
-     switch(k){
-      
-      case 0:     
-      
-Create create = new Create ();
-create.CreateAktienwert();
-        break;
-        
-      case 1:
-Select select = new Select ();
-select.SelectAktienwerte();
-        break;
-
-      case 2:
-Update update = new Update ();
-update.UpdateAktienwerte();
-        break;
-      
-      case 3:
-Delete delete = new Delete ();
-delete.DeleteAktienwerte();
-        break;
-        
-      default:
-          
-          System.err.println("falsche Auswahl!");
-          
-          break;}  
-     break;
-     // Aktienauswahl ende
-     
+         
      // Gewinnrevision Punkt 8
      case 2:
          System.out.println("gewinnrevisionsaktualisierung Punkt 8 Levermann");   

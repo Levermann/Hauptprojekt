@@ -34,14 +34,14 @@ public class Update {
     System.out.println("Eingabe:\n 1. ID \n 2. Unternehmen \n 3. Datum \n 4. Eigenkapital \n 5. Jahresueberschuss");
        
     //Select Primärschlüssel
-   int id = scanner.nextInt();
-   Unternehmen.setId(id);
+   int cid = scanner.nextInt();
+   Unternehmen.setCid(cid);
     
     String name = scanner.next();    
     Unternehmen.setName(name);
     
     String datum = scanner.next();
-    Unternehmen.setDate(datum);
+    Unternehmen.setDatum(datum);
    
     float  eigenkapital = scanner.nextInt(); 
     Unternehmen.setEigenkapital(eigenkapital);   
@@ -59,35 +59,5 @@ public class Update {
     
  
     
-        public void UpdateAktienwerte () {
-
- System.out.println("Eingabe:\n 1. ID \n 2. Unternehmen \n 3. Wert_pro_Aktie" );
-        Scanner scanner = new Scanner(System.in);    
-// Eingabeauforderung Unternehmen
-   int id = scanner.nextInt();
-         
-   SessionFactory factory;
-	factory = (SessionFactory) new Configuration().configure().addAnnotatedClass(Aktienwerte.class).buildSessionFactory();
-     Session session = factory.openSession(); 
-   Aktienwerte Aktienwerte=new Aktienwerte();
-   
-  try {      
-      
-     Aktienwerte.setAId(id);
-     
-    //Select Primärschlüssel
-    String name = scanner.next();    
-    Aktienwerte.setAName(name);
-   
-    float  Wert_pro_Aktie = scanner.nextInt(); 
-    Aktienwerte.setWert_pro_Aktie(Wert_pro_Aktie);   
-   
-    session.beginTransaction(); 
         
-   // Aktion   
-        session.update(Aktienwerte);
-    
-    // Variablen zum Update    
-        session.getTransaction().commit();}
-	finally{factory.close();}}
 }
