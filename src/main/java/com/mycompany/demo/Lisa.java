@@ -16,7 +16,7 @@ import java.util.GregorianCalendar;
  *
  * @author Landb
  */
-public class AktuellesDatum {
+public class Lisa {
     static void printGregorianCalendarDate() {
         GregorianCalendar now = new GregorianCalendar();
         DateFormat df = DateFormat.getDateInstance(DateFormat.SHORT);   // 14.04.12
