@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.demo;
+package LevermannTest;
 
+import com.mycompany.demo.*;
 import java.util.List;
 import java.util.Scanner;
 import org.hibernate.Query;
@@ -17,7 +18,7 @@ import org.hibernate.cfg.Configuration;
  *
  * @author Landb
  */
-public class Gewinnrevision {
+public class GewinnrevisionTest {
     
     public void Gewinnrevision () {
     
@@ -26,7 +27,7 @@ public class Gewinnrevision {
     factory = (SessionFactory) new Configuration().configure().buildSessionFactory();
     Session session1 = factory.openSession(); 
       try{  
-    Unternehmen Un= new Unternehmen();
+    UnternehmenTest Un= new UnternehmenTest();
   
      // Verbingungsaufbau
      session1.beginTransaction();
@@ -40,10 +41,10 @@ public class Gewinnrevision {
      query0.setFirstResult(0);
 
      // Erstellung der Liste
-     List<Unternehmen> users0 = (List<Unternehmen>) query0.list();
+     List<UnternehmenTest> users0 = (List<UnternehmenTest>) query0.list();
           
         System.out.println("ID + Unternehman" + " Eigenkapital" + " Jahresueberschuss " + "Datum");
-        for (Unternehmen u : users0)
+        for (UnternehmenTest u : users0)
        
         // Ausgabe
     
@@ -59,10 +60,10 @@ public class Gewinnrevision {
      query2.setFirstResult(0);
 
      // Erstellung der Liste
-     List<Punkteliste> users1 = (List<Punkteliste>) query2.list();
+     List<PunktelisteTest> users1 = (List<PunktelisteTest>) query2.list();
           
         System.out.println("ID + Unternehman" + " Eigenkapital" + " Jahresueberschuss " + "Datum");
-        for (Punkteliste o : users1)   
+        for (PunktelisteTest o : users1)   
                    
           o.setGewinnrevision(1);
         

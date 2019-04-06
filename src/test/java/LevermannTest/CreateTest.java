@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.demo;
+package LevermannTest;
 
+import com.mycompany.demo.*;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -15,7 +16,7 @@ import java.util.Scanner;
 * @author Flandd done 01.03.2019
 * 
  */
-public class Create {
+public class CreateTest {
  
      public void CreateUnternehmen () {
              System.out.println(" Bitte \n 1. Unternehmen \n 2. Datum \n 3. Eigenkapital \n 4. JahresÃ¼berschuss");
@@ -36,7 +37,7 @@ public class Create {
             //create a unternehmen object
             System.out.println("Creating new Unternehmen Object");
       
-            Unternehmen un = new Unternehmen (name, datum , eigenkapital , jahresueberschuss);
+            UnternehmenTest un = new UnternehmenTest (name, datum , eigenkapital , jahresueberschuss);
 
             un.setName(name); 
             un.setDatum(datum);

@@ -6,8 +6,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.demo;
+package LevermannTest;
 
+import com.mycompany.demo.*;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -16,19 +17,19 @@ import java.util.Scanner;
  *
 * @author Flandd done 01.03.2019
  */
-public class Update {
+public class UpdateTest {
 
 
     public void UpdateUnternehmen () {
 
         Scanner scanner = new Scanner(System.in);    
-// Eingabeauforderung Unternehmen
+// Eingabeauforderung UnternehmenTest
   
          
    SessionFactory factory;
-	factory = (SessionFactory) new Configuration().configure().addAnnotatedClass(Unternehmen.class).buildSessionFactory();
+	factory = (SessionFactory) new Configuration().configure().addAnnotatedClass(UnternehmenTest.class).buildSessionFactory();
      Session session = factory.openSession(); 
-   Unternehmen Unternehmen=new Unternehmen();
+   UnternehmenTest Unternehmen=new UnternehmenTest();
    
   try {      
     System.out.println("Eingabe:\n 1. ID \n 2. Unternehmen \n 3. Datum \n 4. Eigenkapital \n 5. Jahresueberschuss");
@@ -53,7 +54,7 @@ public class Update {
    // Aktion   
         session.update(Unternehmen);
     
-    // Variablen zum Update    
+    // Variablen zum UpdateTest    
         session.getTransaction().commit();}
 	finally{factory.close();}}
     

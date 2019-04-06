@@ -3,9 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.demo;
+package LevermannTest;
 
 
+import com.mycompany.demo.*;
 import java.util.List;
 import java.util.Scanner;
 import org.hibernate.Query;
@@ -16,14 +17,14 @@ import org.hibernate.cfg.Configuration;
  *
  * @author Flandd done 01.03.2019
  */
-public class Select {
+public class SelectTest {
 
     public void SelectUnternehmen () {
     
     // Erstellung des Scanners
     Scanner scanner = new Scanner(System.in);    
     
-    // Select statement 
+    // SelectTest statement 
        String Select = "from Unternehmen where " ;
    
     System.out.println("Bitte wählen Sie: \n 0: alles \n 1: ID \n 2: Firmen");       
@@ -35,7 +36,7 @@ public class Select {
     SessionFactory factory;
     factory = (SessionFactory) new Configuration().configure().buildSessionFactory();
     Session session = factory.openSession(); 
-    Unternehmen Unternehmen=new Unternehmen();
+    UnternehmenTest Unternehmen=new UnternehmenTest();
   
      // Verbingungsaufbau
      session.beginTransaction();
@@ -52,10 +53,10 @@ public class Select {
      query0.setFirstResult(0);
 
      // Erstellung der Liste
-     List<Unternehmen> users0 = (List<Unternehmen>) query0.list();
+     List<UnternehmenTest> users0 = (List<UnternehmenTest>) query0.list();
           
         System.out.println("ID + Unternehman" + " Eigenkapital" + " Jahresueberschuss " + "Datum");
-        for (Unternehmen u : users0)
+        for (UnternehmenTest u : users0)
        
         // Ausgabe
               System.out.println( u.toString() );
@@ -116,8 +117,8 @@ public class Select {
      
      
      // Erstellung der Liste
-     List<Unternehmen> users1 = (List<Unternehmen>) query1.list();
-          for (Unternehmen u : users1)
+     List<UnternehmenTest> users1 = (List<UnternehmenTest>) query1.list();
+          for (UnternehmenTest u : users1)
        
 
               
@@ -172,9 +173,9 @@ public class Select {
      
   
      // Erstellung der Liste
-     List<Unternehmen> users2 = (List<Unternehmen>) query2.list();
+     List<UnternehmenTest> users2 = (List<UnternehmenTest>) query2.list();
      
-     for (Unternehmen u : users2)
+     for (UnternehmenTest u : users2)
        
     // Ausgabe
         System.out.println(u.toString());

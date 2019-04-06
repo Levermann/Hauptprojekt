@@ -3,9 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.demo;
+package LevermannTest;
 
 
+import com.mycompany.demo.*;
 import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
@@ -40,9 +41,9 @@ import org.hibernate.Query;
     @NamedQuery (name = "Unternehmen.findAll", query = "Select c FROM Unternehmen c")
 
 })
-public class Unternehmen implements Serializable {
+public class UnternehmenTest implements Serializable {
 
-    public Unternehmen(String name, String datum, float eigenkapital, float jahresueberschuss) {
+    public UnternehmenTest(String name, String datum, float eigenkapital, float jahresueberschuss) {
         this.name = name;
         this.datum = datum;
         this.eigenkapital = eigenkapital;
@@ -50,7 +51,7 @@ public class Unternehmen implements Serializable {
        
     }
 
-    Unternehmen() {}
+    UnternehmenTest() {}
 
  
     @Override
@@ -198,7 +199,7 @@ public class Unternehmen implements Serializable {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Unternehmen other = (Unternehmen) obj;
+        final UnternehmenTest other = (UnternehmenTest) obj;
         if (this.Cid != other.Cid) {
             return false;
         }

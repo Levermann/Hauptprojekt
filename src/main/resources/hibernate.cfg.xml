@@ -14,13 +14,9 @@
     <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
     <!-- Echo the SQL to stdout -->
     <property name="show_sql">true</property>
-    <!-- Set the current session context -->
-    <property name="current_session_context_class">thread</property>
     <!-- List of XML mapping files -->
     <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-   
     <mapping class="com.mycompany.demo.Unternehmen"/>
-    <mapping class="com.mycompany.demo.Aktienwerte"/>
-        <mapping class="com.mycompany.demo.Punkteliste"/>
+     <mapping class="com.mycompany.demo.Punkteliste"/>
   </session-factory>
 </hibernate-configuration>

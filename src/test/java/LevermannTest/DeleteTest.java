@@ -6,8 +6,9 @@ on Track
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.demo;
+package LevermannTest;
 
+import com.mycompany.demo.*;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -16,12 +17,12 @@ import java.util.Scanner;
  *
 * @author Flandd done 01.03.2019
  */
-public class Delete {
+public class DeleteTest {
 
     
 void DeleteUnternehmen() {
  
-    // Eingabeauforderung Unternehmen
+    // Eingabeauforderung UnternehmenTest
     Scanner scanner = new Scanner(System.in);    
 
    
@@ -29,14 +30,14 @@ void DeleteUnternehmen() {
     factory = (SessionFactory) new Configuration().configure().buildSessionFactory();
     Session session = factory.openSession(); 
     try{  
-    Unternehmen Unternehmen=new Unternehmen();
+    UnternehmenTest Unternehmen=new UnternehmenTest();
   
        System.out.println("Sie befinden sich in der IDauswahl, bitte name Eingeben:");  
      // Eingabeauforderung ID
           //  int id = scanner.nextInt();
             String name = scanner.next(); 
             
-          //  Unternehmen.setCid(id); 
+          //  UnternehmenTest.setCid(id); 
           Unternehmen.setName(name);
             
      // Verbingungsaufbau
