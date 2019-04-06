@@ -34,9 +34,6 @@ public class AktuellesDatumTest {
 //        df = DateFormat.getDateTimeInstance(DateFormat.SHORT, DateFormat.LONG); // 14.04.12 21:34:07 MESZ
         System.out.println(df.format(now.getTime())); 
         }
-    
-    
-    
         static void printSimpleDateFormat() {
         SimpleDateFormat formatter = new SimpleDateFormat(
                 "yyyy.MM.dd - HH:mm:ss ");
