@@ -17,5 +17,6 @@
     <!-- List of XML mapping files -->
     <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
     <mapping class="com.mycompany.demo.Unternehmen"/>
+     <mapping class="com.mycompany.demo.Punkteliste"/>
   </session-factory>
 </hibernate-configuration>

@@ -4,6 +4,7 @@
     <provider>org.hibernate.ejb.HibernatePersistence</provider>
     <jta-data-source>java:/DefaultDS</jta-data-source>
     <class>com.mycompany.demo.Unternehmen</class>
+    <class>com.mycompany.demo.Punkteliste</class>
     <properties>
          property name="hibernate.dialect" 
                   value="org.hibernate.dialect.HSQLDialect"/&gt;

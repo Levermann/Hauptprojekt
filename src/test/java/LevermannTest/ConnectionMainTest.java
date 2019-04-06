@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.demo;
+package LevermannTest;
 
+import com.mycompany.demo.*;
 import java.util.List;
 import java.util.Scanner;
 import javax.persistence.EntityManager;
@@ -16,7 +17,7 @@ import org.hibernate.Query;
  *
  * @author Das ist ein Test :D
  */
-public class ConnectionMain {
+public class ConnectionMainTest {
 
     
     
@@ -41,14 +42,14 @@ public class ConnectionMain {
      
      
         
-  Gewinnrevision Gewinnrevision = new Gewinnrevision();
+  GewinnrevisionTest Gewinnrevision = new GewinnrevisionTest();
   Gewinnrevision.Gewinnrevision();
   
-       //System.out.println("Wilkommen in der Tabellenbearbeitung \n Bitte wählen Sie: \n 0. Unternehmen \n 2. Gewinnrevision");         
+       //System.out.println("Wilkommen in der Tabellenbearbeitung \n Bitte wählen Sie: \n 0. Unternehmen \n 2. GewinnrevisionTest");         
         
        
-     //  Gewinnrevision gr = new Gewinnrevision ();
-     //  gr.Gewinnrevision();
+     //  GewinnrevisionTest gr = new GewinnrevisionTest ();
+     //  gr.GewinnrevisionTest();
        
      
    
@@ -100,14 +101,14 @@ public class ConnectionMain {
       break;
       // Unternehmensauswahl ende
          
-     // Gewinnrevision Punkt 8
+     // GewinnrevisionTest Punkt 8
      case 2:
          System.out.println("gewinnrevisionsaktualisierung Punkt 8 Levermann");   
-Gewinnrevision Gewinnrevision = new Gewinnrevision ();
-Gewinnrevision.Gewinnrevision();
+GewinnrevisionTest GewinnrevisionTest = new GewinnrevisionTest ();
+GewinnrevisionTest.GewinnrevisionTest();
          
      break;
-     // Gewinnrevision Punkt 8 ende
+     // GewinnrevisionTest Punkt 8 ende
      
      // default für Switch case     
      default:

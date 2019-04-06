@@ -1,4 +1,4 @@
-package com.mycompany.demo;
+package LevermannTest;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -6,6 +6,7 @@ package com.mycompany.demo;
  * and open the template in the editor.
  */
 
+import com.mycompany.demo.*;
 import java.io.Serializable;
 import java.util.Objects;
 import javax.persistence.Column;
@@ -28,7 +29,7 @@ import javax.persistence.Table;
 @Entity 
 
 @Table(name="punkteliste")
-public class Punkteliste implements Serializable {
+public class PunktelisteTest implements Serializable {
 
     public int getPid() {
         return Pid;
@@ -90,7 +91,7 @@ public class Punkteliste implements Serializable {
     @Column(name="Gewinnwachstum")
     private int Gewinnwachstum;      
         
-Punkteliste() {}
+PunktelisteTest() {}
     
     
     public int getCid2() {
