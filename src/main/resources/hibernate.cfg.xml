@@ -6,8 +6,8 @@
     <property name="connection.url">jdbc:mysql://localhost:3306/levermann?useSSL=false</property>
     <property name="connection.serverTimezone">UTC</property>
     <property name="connection.useLegacyDatetimeCode">false</property>
-    <property name="connection.username">Florian</property>
-    <property name="connection.password">Schinken</property>
+    <property name="connection.username">Levermann</property>
+    <property name="connection.password">levermann</property>
     <!-- JDBC connection pool settings ... using built-in test pool -->
     <property name="connection.pool_size">1</property>
     <!-- Select our SQL dialect -->
