@@ -19,6 +19,9 @@ import java.util.GregorianCalendar;
  */
 public class AktuellesDatumTest {
     static void printGregorianCalendarDate() {
+        
+        
+        
         GregorianCalendar now = new GregorianCalendar();
         DateFormat df = DateFormat.getDateInstance(DateFormat.SHORT);   // 14.04.12
         df = DateFormat.getDateInstance(DateFormat.MEDIUM);             // 14.04.2012
