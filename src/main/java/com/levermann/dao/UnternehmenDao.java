@@ -12,4 +12,9 @@ public class UnternehmenDao {
         session.saveOrUpdate(A);
         transaction.commit();
     }
+    public Unternehmen getUnternehmenById (Long Cid) {
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+        Transaction transaction = session.beginTransaction();
+        session.get(Unternehmen.class, Cid);
+    }
 }
