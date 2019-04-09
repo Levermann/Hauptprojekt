@@ -1,48 +1,63 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.levermann.project;
 
-import com.levermann.dao.UnternehmenDao;
+import com.levermann.entityclass.Punkteliste;
 import com.levermann.entityclass.Unternehmen;
 import com.levermann.kennzahlen.Gewinnrevision;
 
-/**
- *
- * @author Das ist ein Test :D
- */
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
 public class ConnectionMain {
 
-    
-    
-    
-    
-    /**
-     * @param args the command line arguments
-    
-    * 
-    * */
+
     @SuppressWarnings("empty-statement")
     public static void main(String[] args) {
 
-      //done
-      //   Create create = new Create ();
-      //  create.CreateUnternehmen();
-       //  Delete delete = new Delete ();
-     //   delete.DeleteUnternehmen();
+
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("HibernatePersistenzEM");
+        EntityManager em = emf.createEntityManager();
+        try
+        {
+            Unternehmen unternehmen = new Unternehmen();
+            unternehmen.setName("Adidas");
+            unternehmen.setJahresueberschuss(666666);
+            unternehmen.setEigenkapital(77778);
+            em.getTransaction().begin();
+            em.persist(unternehmen);
+            em.getTransaction().commit();
+
+            String query = "SELECT A FROM Unternehmen A";
+            for (Unternehmen A: em.createQuery(query, Unternehmen.class).getResultList())
+                System.out.println(A.getName());
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            em.getTransaction().rollback();
+        }
+        finally {
+            em.close();
+        }
 
 
-        Unternehmen A = new Unternehmen("Adidas");
-        UnternehmenDao Udao = new UnternehmenDao();
-        Udao.createUnternehmen(A);
-     
 
-        
-  Gewinnrevision Gewinnrevision = new Gewinnrevision();
+
+
+
+
+
+
+
+
+
+
+        Gewinnrevision Gewinnrevision = new Gewinnrevision();
   Gewinnrevision.Gewinnrevision();
-  
+
+
+
+
+
        //System.out.println("Wilkommen in der Tabellenbearbeitung \n Bitte wählen Sie: \n 0. Unternehmen \n 2. Gewinnrevision");         
         
        
