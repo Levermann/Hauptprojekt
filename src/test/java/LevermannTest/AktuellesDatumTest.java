@@ -21,7 +21,6 @@ public class AktuellesDatumTest {
     static void printGregorianCalendarDate() {
         
         
-        
         GregorianCalendar now = new GregorianCalendar();
         DateFormat df = DateFormat.getDateInstance(DateFormat.SHORT);   // 14.04.12
         df = DateFormat.getDateInstance(DateFormat.MEDIUM);             // 14.04.2012
@@ -34,8 +33,6 @@ public class AktuellesDatumTest {
 //        df = DateFormat.getDateTimeInstance(DateFormat.SHORT, DateFormat.LONG); // 14.04.12 21:34:07 MESZ
         System.out.println(df.format(now.getTime())); 
         }
-    
-    
     
         static void printSimpleDateFormat() {
         SimpleDateFormat formatter = new SimpleDateFormat(
