@@ -3,8 +3,9 @@
   <persistence-unit name="HibernatePersistenzEM" transaction-type="JTA">
     <provider>org.hibernate.ejb.HibernatePersistence</provider>
     <jta-data-source>java:/DefaultDS</jta-data-source>
-    <class>com.mycompany.demo.Unternehmen</class>
-    <class>com.mycompany.demo.Punkteliste</class>
+
+      <class>com.levermann.projekt.Unternehmen</class>
+      <class>com.levermann.projekt.Punkteliste</class>
     <properties>
          property name="hibernate.dialect" 
                   value="org.hibernate.dialect.HSQLDialect"/&gt;
