@@ -4,20 +4,17 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-
 @Table(name="levermannschritte")
 public class Levermannschritte  implements Serializable {
-
+    public Levermannschritte() {
+    }
     public int getLid() {
         return Lid;
     }
-
     public void setPid(int Lid) {
         this.Lid = Lid;
     }
-
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
     @Id
     @Column(name = "Lid")
     private int Lid;
@@ -25,10 +22,10 @@ public class Levermannschritte  implements Serializable {
     @Column(name = "Cid3")
     private int Cid3;
 
-    @Column(name = "Eigenkapitalrendite ")
+    @Column(name = "Eigenkapitalrendite")
     private int Eigenkapitalrendite;
 
-    @Column(name = "EBITMarge ")
+    @Column(name = "EBITMarge")
     private int EBITMarge;
 
     @Column(name = "Eigenkapitalquote")
@@ -37,8 +34,8 @@ public class Levermannschritte  implements Serializable {
     @Column(name = "KursGewinnVerhältnis")
     private int KursGewinnVerhältnis;
 
-    @Column(name = "KursGewinnVerhältnisAktuell")
-    private int KursGewinnVerhältnisAktuell;
+    @Column(name = "KursGewinnVerhältnis5Jahre")
+    private int KursGewinnVerhältnis5Jahre;
 
     @Column(name = "Analystenmeinungen")
     private int Analystenmeinungen;
@@ -46,7 +43,7 @@ public class Levermannschritte  implements Serializable {
     @Column(name = "ReaktionaufQuartalszahlen")
     private int ReaktionaufQuartalszahlen;
 
-    @Column(name = "Gewinnrevision ")
+    @Column(name = "Gewinnrevision")
     private int Gewinnrevision;
 
     @Column(name = "Kursverlauf6Monate")
@@ -64,8 +61,7 @@ public class Levermannschritte  implements Serializable {
     @Column(name = "Gewinnwachstum")
     private int Gewinnwachstum;
 
-    Levermannschritte() {
-    }
+
 
 
     public int getCid3() {
@@ -108,12 +104,11 @@ public class Levermannschritte  implements Serializable {
         this.KursGewinnVerhältnis = KursGewinnVerhältnis;
     }
 
-    public int getKursGewinnVerhältnisAktuell() {
-        return KursGewinnVerhältnisAktuell;
+    public int getKursGewinnVerhältnis5Jahre() {
+        return KursGewinnVerhältnis5Jahre;
     }
-
-    public void setKursGewinnVerhältnisAktuell(int KursGewinnVerhältnisAktuell) {
-        this.KursGewinnVerhältnisAktuell = KursGewinnVerhältnisAktuell;
+    public void setKursGewinnVerhältnis5Jahre(int KursGewinnVerhältnis5Jahre) {
+        this.KursGewinnVerhältnis5Jahre = KursGewinnVerhältnis5Jahre;
     }
 
     public int getAnalystenmeinungen() {

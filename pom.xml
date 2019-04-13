@@ -19,6 +19,11 @@
             <version>5.0.8.Final</version>
         </dependency>
         <dependency>
+            <groupId>jaxen</groupId>
+            <artifactId>jaxen</artifactId>
+            <version>1.1.1</version>
+        </dependency>
+        <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.23</version>
@@ -62,61 +67,64 @@
             <artifactId>hibernate-entitymanager</artifactId>
             <version>4.3.1.Final</version>
         </dependency>
+        <!--
+        Lief nicht weil Fehlermeldungen weil Konflikt weil hibernate weil eclipse nicht nötig ;)
         <dependency>
-            <groupId>org.eclipse.persistence</groupId>
-            <artifactId>org.eclipse.persistence.antlr</artifactId>
-            <version>2.6.1-RC1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.persistence</groupId>
-            <artifactId>org.eclipse.persistence.asm</artifactId>
-            <version>2.6.1-RC1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.persistence</groupId>
-            <artifactId>org.eclipse.persistence.core</artifactId>
-            <version>2.6.1-RC1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.persistence</groupId>
-            <artifactId>org.eclipse.persistence.dbws</artifactId>
-            <version>2.6.1-RC1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.persistence</groupId>
-            <artifactId>org.eclipse.persistence.jpa</artifactId>
-            <version>2.6.1-RC1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.persistence</groupId>
-            <artifactId>org.eclipse.persistence.jpa.jpql</artifactId>
-            <version>2.6.1-RC1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.persistence</groupId>
-            <artifactId>org.eclipse.persistence.jpa.modelgen.processor</artifactId>
-            <version>2.6.1-RC1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.persistence</groupId>
-            <artifactId>org.eclipse.persistence.moxy</artifactId>
-            <version>2.6.1-RC1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.persistence</groupId>
-            <artifactId>org.eclipse.persistence.oracle</artifactId>
-            <version>2.6.1-RC1</version>
-        </dependency>
-        <dependency>
-            <groupId>unknown.binary</groupId>
-            <artifactId>mysql-connector-java-5.1.23-bin</artifactId>
-            <version>SNAPSHOT</version>
-        </dependency>
-    </dependencies>
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-    </properties>
-    <name>Levermann</name>
-</project>
+             <groupId>org.eclipse.persistence</groupId>
+             <artifactId>org.eclipse.persistence.antlr</artifactId>
+             <version>2.6.1-RC1</version>
+         </dependency>
+         <dependency>
+             <groupId>org.eclipse.persistence</groupId>
+             <artifactId>org.eclipse.persistence.asm</artifactId>
+             <version>2.6.1-RC1</version>
+         </dependency>
+         <dependency>
+             <groupId>org.eclipse.persistence</groupId>
+             <artifactId>org.eclipse.persistence.core</artifactId>
+             <version>2.6.1-RC1</version>
+         </dependency>
+         <dependency>
+             <groupId>org.eclipse.persistence</groupId>
+             <artifactId>org.eclipse.persistence.dbws</artifactId>
+             <version>2.6.1-RC1</version>
+         </dependency>
+         <dependency>
+             <groupId>org.eclipse.persistence</groupId>
+             <artifactId>org.eclipse.persistence.jpa</artifactId>
+             <version>2.6.1-RC1</version>
+         </dependency>
+         <dependency>
+             <groupId>org.eclipse.persistence</groupId>
+             <artifactId>org.eclipse.persistence.jpa.jpql</artifactId>
+             <version>2.6.1-RC1</version>
+         </dependency>
+         <dependency>
+             <groupId>org.eclipse.persistence</groupId>
+             <artifactId>org.eclipse.persistence.jpa.modelgen.processor</artifactId>
+             <version>2.6.1-RC1</version>
+         </dependency>
+         <dependency>
+             <groupId>org.eclipse.persistence</groupId>
+             <artifactId>org.eclipse.persistence.moxy</artifactId>
+             <version>2.6.1-RC1</version>
+         </dependency>
+         <dependency>
+             <groupId>org.eclipse.persistence</groupId>
+             <artifactId>org.eclipse.persistence.oracle</artifactId>
+             <version>2.6.1-RC1</version>
+         </dependency>
+          -->
+         <dependency>
+             <groupId>unknown.binary</groupId>
+             <artifactId>mysql-connector-java-5.1.23-bin</artifactId>
+             <version>SNAPSHOT</version>
+         </dependency>
+     </dependencies>
+     <properties>
+         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+         <maven.compiler.source>1.8</maven.compiler.source>
+         <maven.compiler.target>1.8</maven.compiler.target>
+     </properties>
+     <name>Levermann</name>
+ </project>

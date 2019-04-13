@@ -2,7 +2,7 @@ package com.levermann.project;
 
 import com.levermann.entityclass.Punkteliste;
 import com.levermann.entityclass.Unternehmen;
-import com.levermann.kennzahlen.Gewinnrevision;
+// import com.levermann.kennzahlen.Gewinnrevision;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -23,6 +23,10 @@ public class ConnectionMain {
             unternehmen.setName("Adidas");
             unternehmen.setJahresueberschuss(666666);
             unternehmen.setEigenkapital(77778);
+
+
+
+
             em.getTransaction().begin();
             em.persist(unternehmen);
             em.getTransaction().commit();
@@ -51,11 +55,13 @@ public class ConnectionMain {
 
 
 
-        Gewinnrevision Gewinnrevision = new Gewinnrevision();
+      /*  Gewinnrevision Gewinnrevision = new Gewinnrevision();
   Gewinnrevision.Gewinnrevision();
 
 
 
+
+       */
 
 
        //System.out.println("Wilkommen in der Tabellenbearbeitung \n Bitte wählen Sie: \n 0. Unternehmen \n 2. Gewinnrevision");         

@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package com.levermann.kennzahlen;
+/*
 
 import java.util.List;
 
@@ -70,3 +71,5 @@ public class Gewinnrevision {
       }finally{factory.close();}} 
     
 }
+
+ */

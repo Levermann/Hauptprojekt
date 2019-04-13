@@ -1,5 +1,6 @@
 package com.levermann.project;
 
+/*
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
 
@@ -19,3 +20,5 @@ public class HibernateUtil {
         return sessionFactory;
     }
 }
+
+ */

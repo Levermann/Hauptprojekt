@@ -1,36 +1,26 @@
 package com.levermann.entityclass;
 
-
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.Persistence;
-import javax.persistence.Table;
-
 
 @Entity
-@Table(name="unternehmen")
+@Access(AccessType.FIELD)
+//@Table(name="unternehmen")
 
 @NamedQueries({
-    @NamedQuery (name = "Unternehmen.findAll", query = "Select c FROM Unternehmen c")
+        @NamedQuery(name = "Unternehmen.findAll", query = "SELECT A FROM Unternehmen A"),
+        @NamedQuery(name = "Unternehmen.findById", query = "SELECT c FROM Unternehmen c WHERE c.Cid =: Cid")
 
 })
 public class Unternehmen implements Serializable {
 
-    public Unternehmen(String name, String datum, float eigenkapital, float jahresueberschuss) {
+    /*public Unternehmen(String name, String datum, float eigenkapital, float jahresueberschuss) {
         this.name = name;
         this.datum = datum;
         this.eigenkapital = eigenkapital;
         this.jahresueberschuss = jahresueberschuss;
-    }
+    }*/
 
     public Unternehmen() {}
 
@@ -74,7 +64,7 @@ public class Unternehmen implements Serializable {
     @Column(name="GewinnAVG")
     private float GewinnAVG;
 
-    @Column(name="Halten ")
+    @Column(name="Halten")
     private float Halten;
 
     @Column(name="Verkaufen")
