@@ -1,8 +1,7 @@
 package com.levermann.kennzahlen;
 
 import java.util.Scanner;
-
-import com.levermann.project.HibernateUtil;
+/*
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -27,9 +26,9 @@ public class Kursverlauf6Monate {
 
 
 
-
-
-
-
     }
+
+
 }
+
+        */

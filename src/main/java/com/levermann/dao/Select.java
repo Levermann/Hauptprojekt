@@ -9,16 +9,13 @@ package com.levermann.dao;
 import java.util.List;
 import java.util.Scanner;
 
-
+/*
 import com.levermann.entityclass.Unternehmen;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
-/**
- *
- * @author Flandd done 01.03.2019
- */
+
 public class Select {
 
     public void SelectUnternehmen () {
@@ -195,4 +192,4 @@ public class Select {
     }                
                   
 
-    
+    */
