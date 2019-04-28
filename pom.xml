@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.mycompany</groupId>
     <artifactId>LevermannAnalYse</artifactId>
@@ -67,8 +68,7 @@
             <artifactId>hibernate-entitymanager</artifactId>
             <version>4.3.1.Final</version>
         </dependency>
-        <!--
-        Lief nicht weil Fehlermeldungen weil Konflikt weil hibernate weil eclipse nicht nötig ;)
+
         <dependency>
              <groupId>org.eclipse.persistence</groupId>
              <artifactId>org.eclipse.persistence.antlr</artifactId>
@@ -114,7 +114,7 @@
              <artifactId>org.eclipse.persistence.oracle</artifactId>
              <version>2.6.1-RC1</version>
          </dependency>
-          -->
+
          <dependency>
              <groupId>unknown.binary</groupId>
              <artifactId>mysql-connector-java-5.1.23-bin</artifactId>
@@ -126,5 +126,8 @@
          <maven.compiler.source>1.8</maven.compiler.source>
          <maven.compiler.target>1.8</maven.compiler.target>
      </properties>
+    <build>
+        <finalName>${project.artifactId}</finalName>
+    </build>
      <name>Levermann</name>
  </project>

@@ -1,9 +1,7 @@
 package com.levermann.project;
 
-import com.levermann.entityclass.Punkteliste;
-import com.levermann.entityclass.Unternehmen;
 // import com.levermann.kennzahlen.Gewinnrevision;
-
+import com.levermann.entityclass.Unternehmen;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;

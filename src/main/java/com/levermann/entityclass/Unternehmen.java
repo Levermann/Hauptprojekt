@@ -1,26 +1,29 @@
 package com.levermann.entityclass;
 
-import javax.persistence.*;
+
 import java.io.Serializable;
 import java.util.Objects;
 
+
 @Entity
 @Access(AccessType.FIELD)
-//@Table(name="unternehmen")
+@Table(name="unternehmen")
 
-@NamedQueries({
+/* @NamedQueries({
         @NamedQuery(name = "Unternehmen.findAll", query = "SELECT A FROM Unternehmen A"),
         @NamedQuery(name = "Unternehmen.findById", query = "SELECT c FROM Unternehmen c WHERE c.Cid =: Cid")
 
 })
+*/
+
 public class Unternehmen implements Serializable {
 
-    /*public Unternehmen(String name, String datum, float eigenkapital, float jahresueberschuss) {
+    public Unternehmen(String name, String datum, float eigenkapital, float jahresueberschuss) {
         this.name = name;
         this.datum = datum;
         this.eigenkapital = eigenkapital;
         this.jahresueberschuss = jahresueberschuss;
-    }*/
+    }
 
     public Unternehmen() {}
 
